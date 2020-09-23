@@ -6,16 +6,38 @@ import Arrows from './Arrows';
 import { Container, Label, ContainerAll } from './style';
 
 const Input: React.FC<IInput> = ({ title, fieldname, Edit, float }) => {
-    const { value, picture, onBlur, onKeyPress, onKeyDown, onClickButtonUp, onContextMenu, onChangeInputFloat, onChangeInputInt, onClickButtonDown } = Input_Logic(fieldname, Edit, float);
+    const {
+        value,
+        onBlur,
+        onKeyPress,
+        onKeyDown,
+        onClickButtonUp,
+        onContextMenu,
+        onChangeInputFloat,
+        onChangeInputInt,
+        onClickButtonDown,
+    } = Input_Logic(fieldname, Edit, float);
 
     return (
         <Container>
-            <Label disabled={picture.image_url !== null}>{title}</Label>
+            <Label>{title}</Label>
 
-            <ContainerAll disabled={picture.image_url !== null}>
-                <InputField value={value} fieldname={fieldname} onChange={float ? onChangeInputFloat : onChangeInputInt} onKeyPress={onKeyPress} onKeyDown={onKeyDown} onBlur={onBlur} />
+            <ContainerAll>
+                <InputField
+                    value={value}
+                    fieldname={fieldname}
+                    onChange={float ? onChangeInputFloat : onChangeInputInt}
+                    onKeyPress={onKeyPress}
+                    onKeyDown={onKeyDown}
+                    onBlur={onBlur}
+                />
 
-                <Arrows fieldname={fieldname} disabled={picture.image_url !== null} onClickButtonUp={onClickButtonUp} onClickButtonDown={onClickButtonDown} onContextMenu={onContextMenu} />
+                <Arrows
+                    fieldname={fieldname}
+                    onClickButtonUp={onClickButtonUp}
+                    onClickButtonDown={onClickButtonDown}
+                    onContextMenu={onContextMenu}
+                />
             </ContainerAll>
         </Container>
     );

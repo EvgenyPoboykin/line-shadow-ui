@@ -1,22 +1,31 @@
 import React, { memo } from 'react';
-import { Container, CloseContainer, CloseItem, LogoContainer, AuthorContainer, LogoItem, LogoVersionItem, AuthorJob, AuthorUser, AuthorsContainer } from './style';
+import {
+    Container,
+    CloseContainer,
+    CloseItem,
+    LogoContainer,
+    AuthorContainer,
+    LogoItem,
+    LogoVersionItem,
+    AuthorJob,
+    AuthorUser,
+    AuthorsContainer,
+} from './style';
 
 import aboutBg from './icons/about-bg.jpg';
 import close from './icons/close.svg';
 import logo from './icons/logo.svg';
 
-import { ContextApp } from '../../../state';
 import DialogWin from '../DialogWin';
 
 import json from '../../../../../package.json';
 
 const About: React.FC = () => {
-    const { app, UseAppState } = React.useContext(ContextApp);
     return (
-        <DialogWin show={app.show_about}>
+        <DialogWin>
             <Container bg={aboutBg}>
                 <CloseContainer>
-                    <CloseItem src={close} onClick={() => UseAppState({ ...app, show_about: false })} />
+                    <CloseItem src={close} />
                 </CloseContainer>
                 <LogoContainer>
                     <LogoItem src={logo} />

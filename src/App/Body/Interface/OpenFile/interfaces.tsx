@@ -1,3 +1,3 @@
 export interface IContainer {
-    display: any;
+    display?: any;
 }

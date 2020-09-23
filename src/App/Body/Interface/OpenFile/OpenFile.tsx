@@ -1,5 +1,4 @@
-import React, { useContext, memo } from 'react';
-import { ContextApp } from '../../../state';
+import React, { memo } from 'react';
 
 import CanvasFrame from '../CanvasFrame';
 import FragmentCanvasFrame from '../FragmentCanvasFrame';
@@ -7,10 +6,8 @@ import FragmentCanvasFrame from '../FragmentCanvasFrame';
 import { Container, ContainerImage, Title, Desc, OpenButtonContainer, OpenButton } from './style';
 
 const OpenFile: React.FC = () => {
-    const { picture } = useContext(ContextApp);
-
     return (
-        <Container display={picture.image_url}>
+        <Container display={null}>
             <ContainerImage>
                 <Title>Open image</Title>
                 <Desc>press Open or drag and drop the image</Desc>

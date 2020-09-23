@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
-const SubMenu_Logic = (showabout: boolean, focus: boolean, open: boolean, close: boolean, generator: boolean) => {
+const SubMenu_Logic = (showabout?: boolean, focus?: boolean, open?: boolean, close?: boolean, generator?: boolean) => {
     const [openmenu, UseOpenMenu] = useState<boolean>(false);
     const wrapperRef = useRef() as React.MutableRefObject<HTMLDivElement>;
 

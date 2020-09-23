@@ -1,4 +1,4 @@
 export interface IInfoFileItem {
-    fieldName: string;
-    fieldData: string;
+    fieldName?: string;
+    fieldData?: string;
 }

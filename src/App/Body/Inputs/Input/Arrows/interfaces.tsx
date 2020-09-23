@@ -1,5 +1,5 @@
 export interface IArrows {
-    disabled: boolean;
+    disabled?: boolean;
     fieldname: string;
     onClickButtonUp: () => void;
     onClickButtonDown: () => void;
@@ -8,5 +8,5 @@ export interface IArrows {
 
 export interface IContainerButton {
     className: string;
-    disabled: boolean;
+    disabled?: boolean;
 }

@@ -1,13 +1,11 @@
-import React, { useContext, memo } from 'react';
-import { ContextApp } from '../../../state';
+import React, { memo } from 'react';
 
 import { Container, SaveButton } from './style';
 
 const Save: React.FC = () => {
-    const { picture, app, onClickSave } = useContext(ContextApp);
     return (
-        <Container disabled={picture.image_url === null}>
-            <SaveButton onClick={onClickSave}>{app.save === null ? 'Save as' : 'Save'}</SaveButton>
+        <Container>
+            <SaveButton>Save as</SaveButton>
         </Container>
     );
 };

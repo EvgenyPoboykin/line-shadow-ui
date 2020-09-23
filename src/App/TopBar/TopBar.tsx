@@ -9,7 +9,7 @@ const { ipcRenderer } = window.require('electron');
 
 const TopBar: React.FC = () => {
     const onDoubleClickTopBar = () => {
-        ipcRenderer.send('maximize');
+        ipcRenderer.send('maximum');
     };
 
     return (

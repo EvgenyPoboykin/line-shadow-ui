@@ -1,3 +1,3 @@
 export interface ITabName {
-    name: string;
+    name?: string;
 }

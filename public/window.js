@@ -10,8 +10,8 @@ exports.CreateWin = (app) => {
     // определение мониторовб 0 - главный
     const displays = electron.screen.getAllDisplays();
     mainWindow = new BrowserWindow({
-        width: displays[0].size.width,
-        height: displays[0].size.height,
+        width: 1920,
+        height: 1080,
         minWidth: 1200,
         minHeight: 900,
         frame: false,

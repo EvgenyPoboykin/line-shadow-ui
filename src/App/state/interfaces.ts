@@ -1,5 +1,5 @@
 export interface IProvider {
-    value: any;
+    value?: any;
     children: React.ReactNode;
 }
 

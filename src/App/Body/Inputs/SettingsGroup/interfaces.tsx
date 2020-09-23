@@ -1,8 +1,8 @@
 export interface ISettingsGroup {
-    name: string;
+    name?: string;
     children: React.ReactNode;
 }
 
 export interface IContainer {
-    disabled: boolean;
+    disabled?: boolean;
 }

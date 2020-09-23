@@ -1,4 +1,4 @@
 export interface IConfirmDialogWindow {
-    func: string;
-    text: string;
+    func?: string;
+    text?: string;
 }

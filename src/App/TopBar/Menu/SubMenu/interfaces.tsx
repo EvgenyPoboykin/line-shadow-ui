@@ -1,11 +1,11 @@
 export interface ISubMenu {
     children: React.ReactNode;
-    showabout: boolean;
-    name: string;
-    focus: boolean;
-    open: boolean;
-    close: boolean;
-    generator: boolean;
+    showabout?: boolean;
+    name?: string;
+    focus?: boolean;
+    open?: boolean;
+    close?: boolean;
+    generator?: boolean;
 }
 
 export interface IMenuItem {
